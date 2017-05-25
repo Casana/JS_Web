@@ -1,90 +1,96 @@
 <!DOCTYPE html>
 <html lang="es">
- <head>
-        <title>Formulario</title>
-        <meta charset="UTF-8">
-        <meta name="author" content="Stefan" >
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/png" href="images/fav_icon.png" sizes="600x600">
-        <link href="formulario.css" rel="stylesheet">
-   </head>
+
+<head>
+    <title>Formulario</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Carlos Martinez">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/fav_icon.png" sizes="600x600">
+    <link href="formulario.css" rel="stylesheet">
+    <script src="scripts/formulario.js"></script>
+</head>
+
 <body>
-  <header>
-      <h1>Formulario</h1>
-  </header>
-  <article>
-  <form method="post" enctype="text/plain">
-	   	
-	   	<fieldset>
-	   		      <legend>Datos del alumno</legend>
-			<div id="izq">
-                <fieldset>
-                <legend>Identificacion</legend>
-               <div class="label">
-               <label for="email">Cuenta de correo</label> <br>
-               <label for="pass">Introduzca su clave de acceso</label> <br>
-               <label for="rpass">Repita la clave de acceso</label> <br>   
-                   
-                </div>  
+    <header>
+        <h1>My Journey</h1>
+        <h2>Formulario de inscripción</h2>
+    </header>
+    <article>
+        <form method="post" enctype="text/plain">
 
-               <div class="input"> 
-               <input type="email" name="email" id="email" size="30" maxlength="100" placeholder="cuenta@dominio.com" required>
-               <input type="password" name="pass" id="pass" size="20" maxlength="100"  required>
-               <input type="password" name="rpass" id="rpass" size="20" maxlength="100" required> 
-               </div>   
-            </fieldset>
             <fieldset>
-                <legend>Curso</legend>
-            <div id="ci">
-                <input type="radio" name="category" value="web" checked="checked">Programador web<br><br>
-                <input type="radio" name="category" value="sist">Programador de Sistemas<br><br>
-                <input type="radio" name="category" value="obj">Programador de Objetos<br>
+                <legend>Datos del viajero</legend>
+                <div id="izq">
+                    <fieldset>
+                        <legend>Identificacion</legend>
+                        <div class="label">
+                            <label for="correo">Cuenta de correo</label> <br>
+                            <label for="cont">Introduzca su clave de acceso</label> <br>
+                            <label for="cont2">Repita la clave de acceso</label> <br>
 
-            </div>
-            <div id="cd">
-                <select size="4">
+                        </div>
+
+                        <div class="input">
+                            <input type="email" name="correo" id="correo" size="30" maxlength="100" placeholder="micuenta@dominio.com" required>
+                            <input type="password" name="cont" id="cont" size="20" maxlength="100" required>
+                            <input type="password" name="cont2" id="cont2" size="20" maxlength="100" required>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Elige tu sector</legend>
+                        <div id="ci">
+                            <input type="radio" name="category" value="web" checked="checked">Programador web<br><br>
+                            <input type="radio" name="category" value="sist">Programador de Sistemas<br><br>
+                            <input type="radio" name="category" value="obj">Programador de Objetos<br>
+
+                        </div>
+                        <div id="cd">
+                            <select size="4">
                        <option>HTML</option>
                        <option>Css</option>
                        <option>JavaScript</option>
                        <option>PHP</option>
+                       <option>ASD </option>
                 </select>
 
-            </div>
-                 
-               
-            </fieldset>
-            
-            </div>
-            <div id="dcha">
-            <fieldset><legend>Datos personales</legend>
-          
-               <div class="label">
-               <label for="name">Nombre</label> <br>
-               <label for="sname">Primer apellido</label> <br>
-               <label for="s2name">Segundo apellido</label> <br>   
-                   
-                </div>  
+                        </div>
 
-               <div class="input"> 
-               <input type="text" name="name" id="name" size="30" maxlength="100"  required>
-               <input type="text" name="sname" id="sname" size="30" maxlength="100" required>
-               <input type="text" name="s2name" id="s2name" size="30" maxlength="100"  required> 
-               </div> 
-                   <fieldset>
-                <legend>Fecha de nacimiento</legend>
-             <label for="dia">Dia
+
+                    </fieldset>
+
+                </div>
+                <div id="der">
+                    <fieldset>
+                        <legend>Datos personales</legend>
+
+                        <div class="label">
+                            <label for="name">Nombre</label> <br>
+                            <label for="sname">Primer apellido</label> <br>
+                            <label for="s2name">Segundo apellido</label> <br>
+
+                        </div>
+
+                        <div class="input">
+                            <input type="text" name="name" id="name" size="30" maxlength="100" required>
+                            <input type="text" name="sname" id="sname" size="30" maxlength="100" required>
+                            <input type="text" name="s2name" id="s2name" size="30" maxlength="100" required>
+                        </div>
+                        <fieldset>
+                            <legend>Fecha de nacimiento</legend>
+                            <label for="dia">Dia
              <input type="text" id="dia" size="10" placeholder="0"></label>
-             <label for="mes">Mes
+                            <label for="mes">Mes
              <input type="text" id="mes" size="10" placeholder="0"></label>
-             <label for="año">Año
+                            <label for="año">Año
              <input type="text" id="año" size="10" placeholder="2000"></label>
-                   </fieldset>
-            
-            
-            </fieldset> 
-            </div>
-            
-       </fieldset>
+                        </fieldset>
+
+
+                    </fieldset>
+                </div>
+
+            </fieldset>
 
 
 
@@ -148,10 +154,12 @@
 	      	<p><input type="time"></p>
 	      	<p> </p>
 	   </fieldset> -->
-	   </form>
-  </article>
+        </form>
+        <button type="button" id="btnE">Enviar</button>
+        <button type="reset" id="btnL">Limpiar</button>
+    </article>
     <footer>
     </footer>
-    </body>
+</body>
 
 </html>

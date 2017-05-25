@@ -1,37 +1,47 @@
- * {box-sizing: border-box;}
- body{width: 80%; 
+ * {
+     box-sizing: border-box;
+ }
+ 
+ body {
+     width: 80%;
      margin: 2em auto;
      background-color: silver
-     }
- form{
+ }
+ 
+ form {
      background-color: steelblue;
- }  
- legend{
+ }
+ 
+ legend {
      background-color: navy;
      color: white;
- } 
- div#izq{
-     width: 50%;
-     float: left;
-     color: white;
-     
- } 
- div#dcha{
+ }
+ 
+ div#der {
      width: 50%;
      float: left;
      color: white;
  }
- div.label{
+ 
+ div#izq {
+     width: 50%;
+     float: left;
+     color: white;
+ }
+ 
+ div.label {
      width: 50%;
      float: left;
      color: white;
      line-height: 130%
  }
- div#ci{
+ 
+ div#ci {
      width: 70%;
      float: left
  }
-  div#cd{
+ 
+ div#cd {
      width: 30%;
      float: left
  }
