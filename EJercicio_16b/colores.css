@@ -1,0 +1,20 @@
+div.colorRed {
+    background-color: #8B3B81;
+    border: 2px double #F93e1b;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 10px;
+    width: 500px;
+}
+
+div.colorYellow {
+    background-color: #0B0B61;
+    color: #F7FE2E;
+    border: 8px double #443e8b;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 10px;
+    width: 500px;
+}
