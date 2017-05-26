@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        function main()
+
+        var domFormulario = document.getElementById("formulario");
+        var domClave1 = document.getElementById("clave1");
+        var domClave2 = document.getElementById("clave2");
+
+        var msg = "";
+        if (clave1.value != clave2.value) {
+            msg = "Las contraseñas no coinciden"
+        }
+        domPass2.setCustomValidity(msg)
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1> Inicio sesión </h1>
+    </header>
+    <article>
+        <h2> Las contraseñas seguras incluyen: </h2>
+        <ul>
+            <li>Letras mayusculas </li>
+            <li>Letras minusculas </li>
+            <li>Numeros </li>
+            <li>Caracteres no Alfanumericos </li>
+            <li>Al menos 8 Caracteres </li>
+        </ul>
+    </article>
+    <article id="formulario">
+        <span> Introduce tu clave de acceso</span>
+        <input id="clave1" maxlength="12" name="clave1" type="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,12}$
+" required/>
+        <span> Introduce tu clave de nuevo</span>
+        <input id="clave2" maxlength="12" name="clave2" type="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,12}$
+" required/>
+        <br>
+        <button type="submit" name="boton" id="boton"> Comprobar </button>
+        <button type="reset" name="boton" id="boton"> Borrar </button>
+    </article>
+    <aside>
+        <noscript>
+                <p>
+                    <em>Si lees este mensaje es que tu navegador no 
+                        ejecuta guiones JavaScript</em>
+                </p>
+            </noscript>
+    </aside>
+
+    <footer>
+        <p>
+            &copy; Copyright by Carlos Martinez
+        </p>
+    </footer>
+
+
+</body>
+
+</html>

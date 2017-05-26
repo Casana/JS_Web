@@ -1,0 +1,47 @@
+ * {
+     box-sizing: border-box;
+ }
+ 
+ body {
+     width: 80%;
+     margin: 2em auto;
+     background-color: silver
+ }
+ 
+ form {
+     background-color: steelblue;
+ }
+ 
+ legend {
+     background-color: navy;
+     color: white;
+ }
+ 
+ div#der {
+     width: 50%;
+     float: left;
+     color: white;
+ }
+ 
+ div#izq {
+     width: 50%;
+     float: left;
+     color: white;
+ }
+ 
+ div.label {
+     width: 50%;
+     float: left;
+     color: white;
+     line-height: 130%
+ }
+ 
+ div#radioboton {
+     width: 70%;
+     float: left
+ }
+ 
+ div.seleccion {
+     width: 30%;
+     float: left
+ }

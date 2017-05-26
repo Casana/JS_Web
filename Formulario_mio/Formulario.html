@@ -13,14 +13,14 @@
 
 <body>
     <header>
-        <h1>My Journey</h1>
+        <h1>Cursos para informáticos</h1>
         <h2>Formulario de inscripción</h2>
     </header>
     <article>
         <form method="post" enctype="text/plain">
 
             <fieldset>
-                <legend>Datos del viajero</legend>
+                <legend>Datos del alumno</legend>
                 <div id="izq">
                     <fieldset>
                         <legend>Identificacion</legend>
@@ -39,23 +39,21 @@
                     </fieldset>
                     <fieldset>
                         <legend>Elige tu sector</legend>
-                        <div id="ci">
+                        <div id="radioboton">
                             <input type="radio" name="category" value="web" checked="checked">Programador web<br><br>
                             <input type="radio" name="category" value="sist">Programador de Sistemas<br><br>
-                            <input type="radio" name="category" value="obj">Programador de Objetos<br>
+                            <input type="radio" name="category" value="obj">Ofimática<br>
 
                         </div>
-                        <div id="cd">
-                            <select size="4">
-                       <option>HTML</option>
-                       <option>Css</option>
-                       <option>JavaScript</option>
-                       <option>PHP</option>
-                       <option>ASD </option>
-                </select>
-
+                        <div class="seleccion" id="web">
+                            <select size="5">
+                                <option>HTML</option>
+                                <option>Css</option>
+                                <option>JavaScript</option>
+                                <option>PHP</option>
+                                <option>Angular </option>
+                            </select>
                         </div>
-
 
                     </fieldset>
 
@@ -86,6 +84,21 @@
              <input type="text" id="año" size="10" placeholder="2000"></label>
                         </fieldset>
 
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend> Especialidad </legend>
+                        <div class="seleccion" id="sistemas">
+                            <select size="5">
+                                    <option>Software Administrativo </option>
+                                    <option>Manejo de dispositivos (Drives)</option>
+                                    <option>Servicios de comunicaciones</option>
+                                    <option>Tecnologías basadas en componentes</option>
+                                    <option>Implementación e integración </option>
+                                    <option>Despliegue y puesta en funcionamiento </option>
+                                </select>
+                        </div>
 
                     </fieldset>
                 </div>
