@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <title>Formulario</title>
+    <title>Cursos informática</title>
     <meta charset="UTF-8">
     <meta name="author" content="Carlos Martinez">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +13,7 @@
 
 <body>
     <header>
-        <h1>Cursos para informáticos</h1>
+        <h1>Masters de informática</h1>
         <h2>Formulario de inscripción</h2>
     </header>
     <article>
@@ -21,82 +21,97 @@
 
             <fieldset>
                 <legend>Datos del alumno</legend>
-                <div id="izq">
+                <div id="identif">
                     <fieldset>
                         <legend>Identificacion</legend>
-                        <div class="label">
-                            <label for="correo">Cuenta de correo</label> <br>
-                            <label for="cont">Introduzca su clave de acceso</label> <br>
-                            <label for="cont2">Repita la clave de acceso</label> <br>
+                        <div>
+                            <label for="correo">Cuenta de correo.....</label>
+                            <input type="email" name="correo" id="correo" size="50" maxlength="80" placeholder="micuenta@dominio.com" required>
+                            <hr>
+                            <label for="cont" title="Debe incluir al menos 9 caracteres alfanumericos">Introduzca su clave de acceso.....</label>
+                            <input type="password" name="cont" id="cont" size="35" maxlength="80" required>
+                            <hr>
+                            <label for="cont2" title="Debe incluir al menos 9 caracteres alfanumericos">Repita la clave de acceso.....</label>
+                            <input type="password" name="cont2" id="cont2" size="35" maxlength="80" required>
+                            <hr>
 
-                        </div>
-
-                        <div class="input">
-                            <input type="email" name="correo" id="correo" size="30" maxlength="100" placeholder="micuenta@dominio.com" required>
-                            <input type="password" name="cont" id="cont" size="20" maxlength="100" required>
-                            <input type="password" name="cont2" id="cont2" size="20" maxlength="100" required>
                         </div>
                     </fieldset>
-                    <fieldset>
-                        <legend>Elige tu sector</legend>
-                        <div id="radioboton">
-                            <input type="radio" name="category" value="web" checked="checked">Programador web<br><br>
-                            <input type="radio" name="category" value="sist">Programador de Sistemas<br><br>
-                            <input type="radio" name="category" value="obj">Ofimática<br>
-
-                        </div>
-                        <div class="seleccion" id="web">
-                            <select size="5">
-                                <option>HTML</option>
-                                <option>Css</option>
-                                <option>JavaScript</option>
-                                <option>PHP</option>
-                                <option>Angular </option>
-                            </select>
-                        </div>
-
-                    </fieldset>
-
                 </div>
-                <div id="der">
+                <div id="personal">
                     <fieldset>
                         <legend>Datos personales</legend>
 
-                        <div class="label">
-                            <label for="name">Nombre</label> <br>
-                            <label for="sname">Primer apellido</label> <br>
-                            <label for="s2name">Segundo apellido</label> <br>
-
+                        <div id="nombre">
+                            <p> <label for="name">Nombre</label> <br>
+                                <input type="text" name="name" id="name" size="30" maxlength="60" required> </p>
+                            <p> <label for="sname">Primer apellido</label> <br>
+                                <input type="text" name="sname" id="sname" size="30" maxlength="80" required> </p>
+                            <p> <label for="s2name">Segundo apellido</label> <br>
+                                <input type="text" name="s2name" id="s2name" size="30" maxlength="80" required> </p>
+                            <p> <label for="s2name">DNI</label> <br>
+                                <input type="text" name="dni" id="dni" size="30" maxlength="9" required> </p>
                         </div>
 
-                        <div class="input">
-                            <input type="text" name="name" id="name" size="30" maxlength="100" required>
-                            <input type="text" name="sname" id="sname" size="30" maxlength="100" required>
-                            <input type="text" name="s2name" id="s2name" size="30" maxlength="100" required>
-                        </div>
-                        <fieldset>
+                        <fieldset id="nacimiento">
                             <legend>Fecha de nacimiento</legend>
                             <label for="dia">Dia
-             <input type="text" id="dia" size="10" placeholder="0"></label>
+                                        <input type="text" id="dia" size="10" placeholder="00"></label>
                             <label for="mes">Mes
-             <input type="text" id="mes" size="10" placeholder="0"></label>
+                                        <input type="text" id="mes" size="10" placeholder="00"></label>
                             <label for="año">Año
-             <input type="text" id="año" size="10" placeholder="2000"></label>
+                                        <input type="text" id="año" size="10" placeholder="2000"></label>
+                        </fieldset>
+
+                        <fieldset id="Direccion">
+                            <legend> Dirección </legend>
+                            <p>Domicilio: <input type="text" name="domicilio" id="domicilio" size="20" maxlength="100" required> </p>
+                            <p>Ciudad: <input type="text" name="city"></p>
+                            <p>Código Postal: <input type="text" name="ZIP" size="10"></p>
                         </fieldset>
 
 
                     </fieldset>
+                </div>
+
+                <div id="otros">
 
                     <fieldset>
-                        <legend> Especialidad </legend>
-                        <div class="seleccion" id="sistemas">
-                            <select size="5">
-                                    <option>Software Administrativo </option>
-                                    <option>Manejo de dispositivos (Drives)</option>
-                                    <option>Servicios de comunicaciones</option>
-                                    <option>Tecnologías basadas en componentes</option>
-                                    <option>Implementación e integración </option>
-                                    <option>Despliegue y puesta en funcionamiento </option>
+                        <legend> Aficiones </legend>
+                        <div class="der">
+
+                            <p> <input type="checkbox" name="Música" /> Música
+                                <input type="checkbox" name="Viajar" /> Viajar
+                                <input type="checkbox" name="Pintura" /> Pintura
+                                <input type="checkbox" name="Fotografia" /> Fotografia </p>
+                            <p><input type="checkbox" name="Cine" /> Cine
+                                <input type="checkbox" name="Lectura" /> Lectura
+                                <input type="checkbox" name="Deporte" /> Deporte
+                                <input type="checkbox" name="Baile" /> Baile </p>
+
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend> Formación previa </legend>
+                        <div class="der" id="sistemas">
+                            <select size="3">
+                                                        <option>Sin formación previa</option>
+                                                        <option>Pequeños cursos realizados por mi cuenta</option>
+                                                        <option>Cursos de formación de duración inferior a 1 año</option>
+                                                        <option>Cursos de formación de 1 o más años </option>
+                                                        <option>Master de informática</option>
+                                                    </select>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend> Experiencia previa </legend>
+                        <div class="previo" id="sistemas">
+                            <select size="3">
+                                                        <option>Sin experiencia previa</option>
+                                                        <option>Experiencia laboral de menos de 2 años</option>
+                                                        <option>Experiencia laboral de 2 a 5 años</option>
+                                                        <option>Experiencia laboral de más de 5 años</option>
                                 </select>
                         </div>
 
@@ -105,11 +120,67 @@
 
             </fieldset>
 
+            <fieldset>
+                <legend> Datos del Curso </legend>
+
+                <fieldset>
+                    <legend>Elige tu sector</legend>
+                    <div id="radioboton">
+                        <input type="radio" name="category" value="web" checked="checked">Programador web<br><br>
+                        <input type="radio" name="category" value="sist">Programador de Sistemas<br><br>
+                        <input type="radio" name="category" value="obj">Ofimática<br>
+
+                    </div>
+                    <div class="seleccion" id="web">
+                        <select size="3">
+                                <option>HTML</option>
+                                <option>Css</option>
+                                <option>JavaScript</option>
+                                <option>PHP</option>
+                                <option>Angular </option>
+                            </select>
+                    </div>
+
+                    <div class="especialidad" id="web">
+                        <select size="3">
+                                <option>Software Administrativo </option>
+                                <option>Manejo de dispositivos (Drives)</option>
+                                <option>Servicios de comunicaciones</option>
+                                <option>Tecnologías basadas en componentes</option>
+                                <option>Implementación e integración </option>
+                                <option>Despliegue y puesta en funcionamiento </option>
+                            </select>
+
+                </fieldset>
+
+            </fieldset>
+
+            <fieldset>
+                <legend> Datos de Pago </legend>
+
+            </fieldset>
+            <p id="fecha"></p>
+
+            <button type="button" id="btnE">Enviar</button>
+            <button type="reset" id="btnL">Limpiar</button>
+        </form>
 
 
+    </article>
+    <aside>
+        Madrid. España. Hora Local
+        <script type="text/javascript">
+            document.write(new Date().toLocaleTimeString());
+        </script>
+    </aside>
+    <footer>
+        &copy; Copyright by Carlos Martinez
+    </footer>
+</body>
 
+</html>
 
-            <!--<label for="name">
+<!--<label for="name">
 				<div class="field">Nombre: </div>
 				<div class="datos"><input type="text" name="name" size="30"></div>
 			</label>
@@ -167,12 +238,3 @@
 	      	<p><input type="time"></p>
 	      	<p> </p>
 	   </fieldset> -->
-        </form>
-        <button type="button" id="btnE">Enviar</button>
-        <button type="reset" id="btnL">Limpiar</button>
-    </article>
-    <footer>
-    </footer>
-</body>
-
-</html>

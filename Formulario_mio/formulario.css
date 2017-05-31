@@ -1,47 +1,70 @@
- * {
-     box-sizing: border-box;
- }
- 
- body {
-     width: 80%;
-     margin: 2em auto;
-     background-color: silver
- }
- 
- form {
-     background-color: steelblue;
- }
- 
- legend {
-     background-color: navy;
-     color: white;
- }
- 
- div#der {
-     width: 50%;
-     float: left;
-     color: white;
- }
- 
- div#izq {
-     width: 50%;
-     float: left;
-     color: white;
- }
- 
- div.label {
-     width: 50%;
-     float: left;
-     color: white;
-     line-height: 130%
- }
- 
- div#radioboton {
-     width: 70%;
-     float: left
- }
- 
- div.seleccion {
-     width: 30%;
-     float: left
- }
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 80%;
+    margin: 2em auto;
+    background-color: silver;
+    background-image: url(images/back.jpg);
+}
+
+header {
+    background-color: steelblue;
+    text-align: center;
+    border-radius: 0.8em;
+}
+
+form {
+    background-color: steelblue;
+}
+
+legend {
+    background-color: navy;
+    color: white;
+}
+
+div#identif {
+    width: 100%;
+    color: white;
+}
+
+div#personal {
+    width: 50%;
+    float: left;
+    color: white;
+}
+
+div#otros {
+    width: 50%;
+    float: right;
+    color: white;
+}
+
+label {
+    line-height: 200%
+}
+
+#nombre {
+    width: 50%;
+    float: left;
+}
+
+#nacimiento {
+    width: 50%;
+    clear: left;
+}
+
+#direccion {
+    width: 100%
+}
+
+div#radioboton {
+    width: 70%;
+    float: left
+}
+
+div.seleccion {
+    width: 30%;
+    float: left
+}
