@@ -29,10 +29,10 @@
                             <input type="email" name="correo" id="correo" size="50" maxlength="80" placeholder="micuenta@dominio.com" required>
                             <hr>
                             <label for="cont" title="Debe incluir al menos 9 caracteres alfanumericos">Introduzca su clave de acceso.....</label>
-                            <input type="password" name="cont" id="cont" size="35" maxlength="80" required>
+                            <input type="password" name="pass1" id="pass1" size="35" maxlength="30" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,12}$" required>
                             <hr>
                             <label for="cont2" title="Debe incluir al menos 9 caracteres alfanumericos">Repita la clave de acceso.....</label>
-                            <input type="password" name="cont2" id="cont2" size="35" maxlength="80" required>
+                            <input type="password" name="pass2" id="pass2" size="35" maxlength="30" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,12}$" required>
                             <hr>
 
                         </div>
@@ -160,7 +160,11 @@
 
             </fieldset>
 
-            <button type="button" id="btnE">Enviar</button>
+            <script type="text/javascript">
+                document.write(new Date().toLocaleDateString());
+            </script>
+
+            <button type="submit" id="btnE">Enviar</button>
             <button type="reset" id="btnL">Limpiar</button>
         </form>
 
@@ -170,8 +174,15 @@
     <aside>
         Madrid. España. Hora Local
         <script type="text/javascript">
-            document.write(new Date().toLocaleTimeString());
+            function mostrarReloj() {
+                document.write(new Date().toLocaleTimeString())
+            };
+            mostrarReloj()
+            window.onload = function() {
+                setInterval(mostrarReloj, 1000)
+            }
         </script>
+        <div id="reloj" />
     </aside>
     <footer>
         &copy; Copyright by Carlos Martinez
