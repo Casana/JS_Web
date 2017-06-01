@@ -26,13 +26,13 @@
                         <legend>Identificacion</legend>
                         <div>
                             <label for="correo">Cuenta de correo.....</label>
-                            <input type="email" name="correo" id="correo" size="50" maxlength="80" placeholder="micuenta@dominio.com" required>
+                            <input type="email" name="correo" id="correo" size="50" maxlength="80" placeholder="micuenta@dominio.com" pattern="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)" required>
                             <hr>
                             <label for="cont" title="Debe incluir al menos 9 caracteres alfanumericos">Introduzca su clave de acceso.....</label>
-                            <input type="password" name="pass1" id="pass1" size="35" maxlength="30" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,12}$" required>
+                            <input type="password" name="cont" id="cont" size="35" maxlength="30" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,12}$" required>
                             <hr>
                             <label for="cont2" title="Debe incluir al menos 9 caracteres alfanumericos">Repita la clave de acceso.....</label>
-                            <input type="password" name="pass2" id="pass2" size="35" maxlength="30" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,12}$" required>
+                            <input type="password" name="cont2" id="cont2" size="35" maxlength="30" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,12}$" required>
                             <hr>
 
                         </div>
@@ -50,24 +50,24 @@
                             <p> <label for="s2name">Segundo apellido</label> <br>
                                 <input type="text" name="s2name" id="s2name" size="30" maxlength="80" required> </p>
                             <p> <label for="s2name">DNI</label> <br>
-                                <input type="text" name="dni" id="dni" size="30" maxlength="9" required> </p>
+                                <input type="text" name="dni" id="dni" size="20" maxlength="9" required> </p>
                         </div>
 
                         <fieldset id="nacimiento">
                             <legend>Fecha de nacimiento</legend>
-                            <label for="dia">Dia
-                                        <input type="text" id="dia" size="10" placeholder="00"></label>
-                            <label for="mes">Mes
-                                        <input type="text" id="mes" size="10" placeholder="00"></label>
-                            <label for="año">Año
-                                        <input type="text" id="año" size="10" placeholder="2000"></label>
+                            <label for="dia">Dia 
+                            <input type="text" id="dia" size="10" placeholder="00"></label> <br>
+                            <label for="mes">Mes 
+                            <input type="text" id="mes" size="10" placeholder="00"></label> <br>
+                            <label for="año">Año 
+                            <input type="text" id="año" size="10" placeholder="2000"></label> <br>
                         </fieldset>
 
-                        <fieldset id="Direccion">
+                        <fieldset id="direccion">
                             <legend> Dirección </legend>
-                            <p>Domicilio: <input type="text" name="domicilio" id="domicilio" size="20" maxlength="100" required> </p>
-                            <p>Ciudad: <input type="text" name="city"></p>
-                            <p>Código Postal: <input type="text" name="ZIP" size="10"></p>
+                            <p>Domicilio: <input type="text" name="domicilio" id="domicilio" size="50" maxlength="100"> </p>
+                            <p>Ciudad: <input type="text" name="ciudad" id="ciudad" size="50" maxlength="100"> </p>
+                            <p>Código Postal: <input type="text" name="ZIP" size="20" maxlength="8" pattern="^([1-9]{2}|[0-9][1-9]|[1-9][0-9])[0-9]{3}$"></p>
                         </fieldset>
 
 
@@ -95,7 +95,7 @@
                     <fieldset>
                         <legend> Formación previa </legend>
                         <div class="der" id="sistemas">
-                            <select size="3">
+                            <select size="5">
                                                         <option>Sin formación previa</option>
                                                         <option>Pequeños cursos realizados por mi cuenta</option>
                                                         <option>Cursos de formación de duración inferior a 1 año</option>
@@ -107,7 +107,7 @@
                     <fieldset>
                         <legend> Experiencia previa </legend>
                         <div class="previo" id="sistemas">
-                            <select size="3">
+                            <select size="5">
                                                         <option>Sin experiencia previa</option>
                                                         <option>Experiencia laboral de menos de 2 años</option>
                                                         <option>Experiencia laboral de 2 a 5 años</option>
@@ -131,8 +131,10 @@
                         <input type="radio" name="category" value="obj">Ofimática<br>
 
                     </div>
-                    <div class="seleccion" id="web">
-                        <select size="3">
+                    <div class="seleccion">
+                        <select size="4" name="cursos" id="cursos">
+                        </select>
+                        <select size="4">
                                 <option>HTML</option>
                                 <option>Css</option>
                                 <option>JavaScript</option>
@@ -141,15 +143,17 @@
                             </select>
                     </div>
 
-                    <div class="especialidad" id="web">
-                        <select size="3">
+                    <div class="especialidad">
+                        <select size="4" name="especialidades" id="especialidades">
+                        </select>
+                        <select size="4">
                                 <option>Software Administrativo </option>
                                 <option>Manejo de dispositivos (Drives)</option>
                                 <option>Servicios de comunicaciones</option>
                                 <option>Tecnologías basadas en componentes</option>
                                 <option>Implementación e integración </option>
                                 <option>Despliegue y puesta en funcionamiento </option>
-                            </select>
+                        </select>
 
                 </fieldset>
 
@@ -158,33 +162,39 @@
             <fieldset>
                 <legend> Datos de Pago </legend>
 
+                <p>Número de tarjeta de crédito: <input type="text" name="cuenta" id="cuenta" size="50" maxlength="80" pattern="^([1-9]{2}|[0-9][1-9]|[1-9][0-9])[0-9]{3}$"> </p>
+
+
             </fieldset>
 
-            <script type="text/javascript">
-                document.write(new Date().toLocaleDateString());
-            </script>
+            <fieldset>
+                <p>
+                    Por favor, acepta las condiciones del curso : <br>
+                    <a href="http://www.madrid.org/" target="_blank">Consulta las condiciones aquí </a> <br>
+                    <input class="post" type="checkbox" name="condiciones" required>
+                    <label>Acepto las condiciones y reglas del curso de informática</label>
+                </p>
+
+                <p id="fecha">
+                    <script type="text/javascript">
+                        document.write(new Date().toLocaleDateString());
+                    </script>
+                </p>
+            </fieldset>
 
             <button type="submit" id="btnE">Enviar</button>
-            <button type="reset" id="btnL">Limpiar</button>
+            <button type="reset" id="btnL">Restablecer</button>
         </form>
 
         <p id="fecha"></p>
 
     </article>
-    <aside>
-        Madrid. España. Hora Local
-        <script type="text/javascript">
-            function mostrarReloj() {
-                document.write(new Date().toLocaleTimeString())
-            };
-            mostrarReloj()
-            window.onload = function() {
-                setInterval(mostrarReloj, 1000)
-            }
-        </script>
-        <div id="reloj" />
-    </aside>
     <footer>
+        <p>Madrid. España. Hora Local
+            <script type="text/javascript">
+                document.write(new Date().toLocaleTimeString());
+            </script>
+        </p>
         &copy; Copyright by Carlos Martinez
     </footer>
 </body>

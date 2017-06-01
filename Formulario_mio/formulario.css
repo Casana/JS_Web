@@ -6,7 +6,7 @@ body {
     width: 80%;
     margin: 2em auto;
     background-color: silver;
-    background-image: url(images/back.jpg);
+    background-image: url(images/back2.jpg);
 }
 
 header {
@@ -46,17 +46,18 @@ label {
 }
 
 #nombre {
-    width: 50%;
+    width: 45%;
     float: left;
 }
 
 #nacimiento {
-    width: 50%;
-    clear: left;
+    width: 45%;
+    float: right;
 }
 
 #direccion {
-    width: 100%
+    width: 100%;
+    clear: left;
 }
 
 div#radioboton {
@@ -67,4 +68,12 @@ div#radioboton {
 div.seleccion {
     width: 30%;
     float: left
+}
+
+#fecha {
+    float: right
+}
+
+footer {
+    background-color: slategrey
 }
