@@ -6,7 +6,7 @@ body {
     width: 80%;
     margin: 2em auto;
     background-color: silver;
-    background-image: url(images/back2.jpg);
+    background-image: url(../images/back2.jpg);
 }
 
 header {

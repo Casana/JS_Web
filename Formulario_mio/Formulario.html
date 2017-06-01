@@ -7,8 +7,9 @@
     <meta name="author" content="Carlos Martinez">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="images/fav_icon.png" sizes="600x600">
-    <link href="formulario.css" rel="stylesheet">
-    <script src="scripts/formulario.js"></script>
+    <link href="estilos/style.css" rel="stylesheet">
+    <script src="scripts/main.js"></script>
+    <script src="scripts/fecha.js"></script>
 </head>
 
 <body>
@@ -168,6 +169,15 @@
             </fieldset>
 
             <fieldset>
+                <legend> Comentarios </legend>
+
+                <p>Escribe aquí cualquier comentario que quieras añadir: </p>
+                <textarea rows="8" cols="150">Escribe aquí </textarea>
+
+
+            </fieldset>
+
+            <fieldset>
                 <p>
                     Por favor, acepta las condiciones del curso : <br>
                     <a href="http://www.madrid.org/" target="_blank">Consulta las condiciones aquí </a> <br>
@@ -177,13 +187,16 @@
 
                 <p id="fecha">
                     <script type="text/javascript">
-                        document.write(new Date().toLocaleDateString());
+                        var mes = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
+                        var diaSemana = new Array("Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado");
+                        var fecha = new Date();
+                        document.write(diaSemana[fecha.getDay()] + ", " + fecha.getDate() + " de " + mes[fecha.getMonth()] + " de " + fecha.getFullYear());
                     </script>
                 </p>
             </fieldset>
 
-            <button type="submit" id="btnE">Enviar</button>
-            <button type="reset" id="btnL">Restablecer</button>
+            <button type="submit" id="btnSubmit">Enviar</button>
+            <button type="reset" id="btnRestablecer">Restablecer</button>
         </form>
 
         <p id="fecha"></p>
@@ -197,6 +210,11 @@
         </p>
         &copy; Copyright by Carlos Martinez
     </footer>
+
+    <div id="resultado" class="oculto">
+        <h2>Los datos del usuario son los siguientes</h2>
+        <ul id="listaDatos"> </ul>
+    </div>
 </body>
 
 </html>
