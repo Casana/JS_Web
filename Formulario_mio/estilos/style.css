@@ -75,5 +75,11 @@ div.seleccion {
 }
 
 footer {
-    background-color: slategrey
+    background-color: slategrey;
+    text-align: center;
+    font-family: cursive
+}
+
+.oculto {
+    display: none
 }
