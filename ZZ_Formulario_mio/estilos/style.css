@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 80%;
+    margin: 2em auto;
+    background-color: silver;
+    background-image: url(../images/back2.jpg);
+}
+
+header {
+    background-color: steelblue;
+    text-align: center;
+    border-radius: 0.8em;
+}
+
+form {
+    background-color: steelblue;
+}
+
+legend {
+    background-color: navy;
+    color: white;
+}
+
+div#identif {
+    width: 100%;
+    color: white;
+}
+
+div#personal {
+    width: 50%;
+    float: left;
+    color: white;
+}
+
+div#otros {
+    width: 50%;
+    float: right;
+    color: white;
+}
+
+label {
+    line-height: 200%
+}
+
+#nombre {
+    width: 45%;
+    float: left;
+}
+
+#nacimiento {
+    width: 45%;
+    float: right;
+}
+
+#direccion {
+    width: 100%;
+    clear: left;
+}
+
+div#radioboton {
+    width: 70%;
+    float: left
+}
+
+div.seleccion {
+    width: 30%;
+    float: left
+}
+
+#fecha {
+    float: right
+}
+
+footer {
+    background-color: slategrey
+}
+
+oculto {
+    display: none
+}
