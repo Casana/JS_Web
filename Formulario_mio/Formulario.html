@@ -76,14 +76,14 @@
                         <legend> Aficiones </legend>
                         <div class="der">
 
-                            <p> <input type="checkbox" name="Música" /> Música
-                                <input type="checkbox" name="Viajar" /> Viajar
-                                <input type="checkbox" name="Pintura" /> Pintura
-                                <input type="checkbox" name="Fotografia" /> Fotografia </p>
-                            <p><input type="checkbox" name="Cine" /> Cine
-                                <input type="checkbox" name="Lectura" /> Lectura
-                                <input type="checkbox" name="Deporte" /> Deporte
-                                <input type="checkbox" name="Baile" /> Baile </p>
+                            <p> <input type="checkbox" name="aficion" value="Música" /> Música
+                                <input type="checkbox" name="aficion" value="Viajar" /> Viajar
+                                <input type="checkbox" name="aficion" value="Pintura" /> Pintura
+                                <input type="checkbox" name="aficion" value="Fotografia" /> Fotografia </p>
+                            <p><input type="checkbox" name="aficion" value="Cine" /> Cine
+                                <input type="checkbox" name="aficion" value="Lectura" /> Lectura
+                                <input type="checkbox" name="aficion" value="Deporte" /> Deporte
+                                <input type="checkbox" name="aficion" value="Baile" /> Baile </p>
 
                         </div>
                     </fieldset>
@@ -121,64 +121,26 @@
 
                 <fieldset>
                     <legend>Elige la modalidad que prefieres</legend>
-                    <div id="radioboton ">
-                        <input type="radio" name="category" value="web" onClick="oFormulario.doIt(this.value);">Programador web<br>
-                        <input type="radio" name="category" value="sist" onClick="oFormulario.doIt(this.value);">Programador de Sistemas<br>
-                        <input type="radio" name="category" value="obj" onClick="oFormulario.doIt(this.value);">Ofimática<br>
+                    <div>
+                        <p class="cursos">
+                            <input type="radio" name="category" value="HTML" onClick="oFormulario.radioOpciones(this.value);">HTML<br>
+                            <input type="radio" name="category" value="CSS" onClick="oFormulario.radioOpciones(this.value);">CSS<br>
+                            <input type="radio" name="category" value="JavaScript" onClick="oFormulario.radioOpciones(this.value);">JavaScript<br>
+                            <input type="radio" name="category" value="PHP" onClick="oFormulario.radioOpciones(this.value);">PHP<br>
+                            <input type="radio" name="category" value="Angular" onClick="oFormulario.radioOpciones(this.value);">Angular<br>
 
+                        </p>
+                        <select size="4" name="especialidades" id="especialidades" class="oculto">
+                        </select>
                     </div>
-                    <div class="seleccion ">
-                        <select size="4" name="cursos" id="cursos">
-                        </select>
-                        <select size="4">
-                                <option>HTML</option>
-                                <option>Css</option>
-                                <option>JavaScript</option>
-                                <option>PHP</option>
-                                <option>Angular </option>
-                            </select>
-                    </div>
-
-                    <div class="especialidad ">
-                        <select size="4" name="especialidades" id="especialidades">
-                        </select>
-                        <select size="4">
-                                <option>Software Administrativo </option>
-                                <option>Manejo de dispositivos (Drives)</option>
-                                <option>Servicios de comunicaciones</option>
-                                <option>Tecnologías basadas en componentes</option>
-                                <option>Implementación e integración </option>
-                                <option>Despliegue y puesta en funcionamiento </option>
-                        </select>
-
                 </fieldset>
-
-            </fieldset>
-
-            <fieldset>
-                <legend> Datos de Pago </legend>
-                <p>Selecciona tipo de tarjeta:
-
-                    <div id="tarjeta">
-                        <input type="radio" name="category" value="web">Visa<br>
-                        <input type="radio" name="category" value="sist">Mastercard<br>
-                        <input type="radio" name="category" value="obj">American Express<br>
-
-                    </div>
-
-                </p>
-                <p>Número de tarjeta de crédito: <input type="text" name="cuenta" id="cuenta" size="50 " maxlength="80 "> </p>
-                <!-- pattern="^([1-9]{2}|[0-9][1-9]|[1-9][0-9])[0-9]{3}$ " -->
-
 
             </fieldset>
 
             <fieldset>
                 <legend> Comentarios </legend>
 
-                <p>Escribe aquí cualquier comentario que quieras añadir: </p>
-                <textarea rows="8" cols="120" placeholder="Escribe aquí"></textarea>
-
+                <textarea rows="8" cols="120" placeholder="Escribe aquí" id="coment"></textarea>
 
             </fieldset>
 

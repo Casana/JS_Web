@@ -69,6 +69,16 @@ div#radioboton {
     float: left
 }
 
+.cursos {
+    float: left;
+    width: 30%
+}
+
+#especialidades {
+    float: left;
+    margin-top: 2em;
+}
+
 div.seleccion {
     width: 30%;
     float: left
