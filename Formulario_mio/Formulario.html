@@ -17,7 +17,7 @@
         <h2>Formulario de inscripción</h2>
     </header>
     <article>
-        <form name="formul" id="formul" method="post" enctype="text/plain" action=" http:\\localhost">
+        <form name="formul" id="formul" method="post" enctype="text/plain">
 
             <fieldset>
                 <legend>Datos del alumno</legend>
@@ -56,12 +56,7 @@
 
                         <fieldset id="nacimiento">
                             <legend>Fecha de nacimiento</legend>
-                            <label for="dia">Dia 
-                            <input type="text" name="dia" id="dia" size="10 " placeholder="00"></label> <br>
-                            <label for="mes">Mes 
-                            <input type="text" name="mes" id="mes" size="10 " placeholder="00"></label> <br>
-                            <label for="año ">Año 
-                            <input type="text" id="año" name="año" size="10 " placeholder="2000"></label> <br>
+                            <input type="date" name="fecha" id="fecha">
                         </fieldset>
 
                         <fieldset id="direccion ">
@@ -113,7 +108,7 @@
                                                         <option>Experiencia laboral de menos de 2 años</option>
                                                         <option>Experiencia laboral de 2 a 5 años</option>
                                                         <option>Experiencia laboral de más de 5 años</option>
-                                </select>
+                            </select>
                         </div>
 
                     </fieldset>
@@ -125,11 +120,11 @@
                 <legend> Datos del Curso </legend>
 
                 <fieldset>
-                    <legend>Elige tu sector</legend>
+                    <legend>Elige la modalidad que prefieres</legend>
                     <div id="radioboton ">
-                        <input type="radio" name="category" value="web" checked="checked">Programador web<br><br>
-                        <input type="radio" name="category" value="sist">Programador de Sistemas<br><br>
-                        <input type="radio" name="category" value="obj">Ofimática<br>
+                        <input type="radio" name="category" value="web" onClick="oFormulario.doIt(this.value);">Programador web<br>
+                        <input type="radio" name="category" value="sist" onClick="oFormulario.doIt(this.value);">Programador de Sistemas<br>
+                        <input type="radio" name="category" value="obj" onClick="oFormulario.doIt(this.value);">Ofimática<br>
 
                     </div>
                     <div class="seleccion ">
@@ -162,7 +157,16 @@
 
             <fieldset>
                 <legend> Datos de Pago </legend>
+                <p>Selecciona tipo de tarjeta:
 
+                    <div id="tarjeta">
+                        <input type="radio" name="category" value="web">Visa<br>
+                        <input type="radio" name="category" value="sist">Mastercard<br>
+                        <input type="radio" name="category" value="obj">American Express<br>
+
+                    </div>
+
+                </p>
                 <p>Número de tarjeta de crédito: <input type="text" name="cuenta" id="cuenta" size="50 " maxlength="80 "> </p>
                 <!-- pattern="^([1-9]{2}|[0-9][1-9]|[1-9][0-9])[0-9]{3}$ " -->
 
@@ -173,36 +177,46 @@
                 <legend> Comentarios </legend>
 
                 <p>Escribe aquí cualquier comentario que quieras añadir: </p>
-                <textarea rows="8" cols="150" placeholder="Escribe aquí"></textarea>
+                <textarea rows="8" cols="120" placeholder="Escribe aquí"></textarea>
 
 
             </fieldset>
 
             <fieldset>
-                <p>
+                <p id="condicion">
                     Por favor, acepta las condiciones del curso : <br>
                     <a href="http://www.madrid.org/ " target="_blank ">Consulta las condiciones aquí </a> <br>
                     <input class="post" type="checkbox" name="condiciones" required>
                     <label>Acepto las condiciones y reglas del curso de informática</label>
                 </p>
 
-                <p id="fecha ">
+                <fieldset id="date">
+                    <p>La fecha de hoy es:</p>
                     <script type="text/javascript ">
                         var mes = new Array("Enero ", "Febrero ", "Marzo ", "Abril ", "Mayo ", "Junio ", "Julio ", "Agosto ", "Septiembre ", "Octubre ", "Noviembre ", "Diciembre ");
                         var diaSemana = new Array("Domingo ", "Lunes ", "Martes ", "Miércoles ", "Jueves ", "Viernes ", "Sábado ");
                         var fecha = new Date();
                         document.write(diaSemana[fecha.getDay()] + ", " + fecha.getDate() + " de " + mes[fecha.getMonth()] + " de " + fecha.getFullYear());
                     </script>
-                </p>
+                </fieldset>
             </fieldset>
+            <fieldset>
 
-            <button type="submit" id="btnSubmit">Enviar</button>
-            <button type="reset" id="btnRestablecer">Restablecer</button>
+                <button type="submit" id="btnSubmit">Enviar</button>
+                <button type="reset" id="btnRestablecer">Restablecer</button>
+
+            </fieldset>
         </form>
 
         <p id="fecha "></p>
 
     </article>
+
+    <div id="resultado" class="oculto">
+        <h2>Los datos recopilados del usuario son los siguientes: </h2>
+        <ul id="listaDatos"> </ul>
+    </div>
+
     <footer>
         <p>Madrid. España. Hora Local
             <script type="text/javascript ">
@@ -212,10 +226,6 @@
         &copy; Copyright by Carlos Martinez
     </footer>
 
-    <div id="resultado" class="oculto">
-        <h2>Los datos recopilados del usuario son los siguientes: </h2>
-        <ul id="listaDatos"> </ul>
-    </div>
 </body>
 
 </html>

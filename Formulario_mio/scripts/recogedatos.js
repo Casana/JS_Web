@@ -21,11 +21,14 @@ class Formulario {
         };
 
         this.oCurso = {
+            "Curso": "",
+            "Especialidad": "",
 
         };
 
         this.oPago = {
-
+            "TipoTar": "",
+            "NumTar": "",
         };
 
         this.oParrafo = document.getElementById("listaDatos");
@@ -42,10 +45,10 @@ class Formulario {
             this.oDatos.PrimerApellido = document.getElementById("ape1").value;
             this.oDatos.SegundoApellido = document.getElementById("ape2").value;
             this.oDatos.DNI = document.getElementById("dni").value;
-            this.oDatos.FechaNacimiento = document.getElementById("dia" + "mes" + "año").value;
+            this.oDatos.FechaNacimiento = document.getElementById("fecha").value;
             this.oDatos.Domicilio = document.getElementById("domic").value;
             this.oDatos.Ciudad = document.getElementById("ciudad").value;
-            this.oDatos.CodigoPostal = document.getElementById("cp").value;
+            this.oDatos.CódigoPostal = document.getElementById("cp").value;
 
             //llamada a la función que procesara el objeto presentandolo en pantalla
             this.escribeDatos();
