@@ -12,15 +12,12 @@ class Formulario {
             "Domicilio": "",
             "Ciudad": "",
             "CódigoPostal": "",
-
             "Aficiones": [],
-            "Formacion": "",
-            "Experiencia": "",
 
             "Curso": "",
             "Especialidad": "",
 
-            "Comentarios": "",
+            "Comentarios": [],
 
         };
 
@@ -173,18 +170,3 @@ class Formulario {
 document.addEventListener("DOMContentLoaded", function() {
     oFormulario = new Formulario
 }, false);
-
-class App {
-
-    static main() {
-
-        document.addEventListener("DOMContentLoaded",
-            function() {
-                new Formulario()
-            }, false);
-    }
-
-} // Fin de la clase App
-
-
-App.main()

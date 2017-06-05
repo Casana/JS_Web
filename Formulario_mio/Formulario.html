@@ -30,7 +30,7 @@
                             <hr>
                             <label for="cont" title="Debe incluir al menos 9 caracteres alfanumericos ">Introduzca su clave de acceso.....</label>
                             <input type="password" name="cont" id="cont" size="35" maxlength="14" required>
-                            <p>* Debe incluir de 9 a 14 caracteres, letras mayúsculas y minúsculas y,al menos, un número </p>
+                            <p>* Debe incluir de 9 a 14 caracteres, letras mayúsculas y minúsculas y, al menos, un número </p>
                             <label for="cont2 " title="Debe incluir al menos 9 caracteres alfanumericos ">Repita la clave de acceso.....</label>
                             <!-- pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{9,14}$ " -->
                             <input type="password" name="cont2" id="cont2" size="35" maxlength="14" required>
@@ -43,76 +43,51 @@
                     <fieldset>
                         <legend>Datos personales</legend>
 
-                        <div id="nombre">
+                        <div id="nombfec">
                             <p> <label for="name">Nombre</label> <br>
-                                <input type="text" name="name" id="name" size="30 " maxlength="60 " required> </p>
+                                <input type="text" name="name" id="name" size="50 " maxlength="60 " required> </p>
                             <p> <label for="sname">Primer apellido</label> <br>
-                                <input type="text" name="ape1" id="ape1" size="30 " maxlength="80 " required> </p>
+                                <input type="text" name="ape1" id="ape1" size="50 " maxlength="80 " required> </p>
                             <p> <label for="s2name">Segundo apellido</label> <br>
-                                <input type="text" name="ape2" id="ape2" size="30 " maxlength="80 " required> </p>
+                                <input type="text" name="ape2" id="ape2" size="50 " maxlength="80 " required> </p>
                             <p> <label for="s2name">DNI</label> <br>
-                                <input type="text" name="dni" id="dni" size="20 " maxlength="9 " required> </p>
+                                <input type="text" name="dni" id="dni" size="35 " maxlength="9 " required> </p>
+
+
+                            <fieldset>
+                                <legend>Fecha de nacimiento</legend>
+                                <input type="date" name="fecha" id="fecha">
+                            </fieldset>
+
                         </div>
 
-                        <fieldset id="nacimiento">
-                            <legend>Fecha de nacimiento</legend>
-                            <input type="date" name="fecha" id="fecha">
-                        </fieldset>
-
-                        <fieldset id="direccion ">
+                        <fieldset id="direccion">
                             <legend> Dirección </legend>
                             <p>Domicilio: <input type="text" name="domic" id="domic" size="50" maxlength="100"> </p>
                             <p>Ciudad: <input type="text" name="ciudad" id="ciudad" size="50" maxlength="100"> </p>
                             <p>Código Postal: <input type="text" name="cp" id="cp" size="20" maxlength="8 " pattern="^([1-9]{2}|[0-9][1-9]|[1-9][0-9])[0-9]{3}$"></p>
                         </fieldset>
 
+                        <fieldset id="aficiones">
+                            <legend> Aficiones </legend>
+                            <div class="der">
+
+                                <p> <input type="checkbox" name="aficion" value="Música" /> Música
+                                    <input type="checkbox" name="aficion" value="Viajar" /> Viajar
+                                    <input type="checkbox" name="aficion" value="Pintura" /> Pintura
+                                    <input type="checkbox" name="aficion" value="Fotografia" /> Fotografia </p>
+                                <p><input type="checkbox" name="aficion" value="Cine" /> Cine
+                                    <input type="checkbox" name="aficion" value="Lectura" /> Lectura
+                                    <input type="checkbox" name="aficion" value="Deporte" /> Deporte
+                                    <input type="checkbox" name="aficion" value="Baile" /> Baile </p>
+
+                            </div>
+                        </fieldset>
 
                     </fieldset>
                 </div>
 
-                <div id="otros">
 
-                    <fieldset>
-                        <legend> Aficiones </legend>
-                        <div class="der">
-
-                            <p> <input type="checkbox" name="aficion" value="Música" /> Música
-                                <input type="checkbox" name="aficion" value="Viajar" /> Viajar
-                                <input type="checkbox" name="aficion" value="Pintura" /> Pintura
-                                <input type="checkbox" name="aficion" value="Fotografia" /> Fotografia </p>
-                            <p><input type="checkbox" name="aficion" value="Cine" /> Cine
-                                <input type="checkbox" name="aficion" value="Lectura" /> Lectura
-                                <input type="checkbox" name="aficion" value="Deporte" /> Deporte
-                                <input type="checkbox" name="aficion" value="Baile" /> Baile </p>
-
-                        </div>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend> Formación previa </legend>
-                        <div class="der" id="sistemas">
-                            <select size="5">
-                                                        <option>Sin formación previa</option>
-                                                        <option>Pequeños cursos realizados por mi cuenta</option>
-                                                        <option>Cursos de formación de duración inferior a 1 año</option>
-                                                        <option>Cursos de formación de 1 o más años </option>
-                                                        <option>Master de informática</option>
-                                                    </select>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <legend> Experiencia previa </legend>
-                        <div class="previo" id="sistemas">
-                            <select size="5 ">
-                                                        <option>Sin experiencia previa</option>
-                                                        <option>Experiencia laboral de menos de 2 años</option>
-                                                        <option>Experiencia laboral de 2 a 5 años</option>
-                                                        <option>Experiencia laboral de más de 5 años</option>
-                            </select>
-                        </div>
-
-                    </fieldset>
-                </div>
 
             </fieldset>
 

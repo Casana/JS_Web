@@ -34,8 +34,7 @@ div#identif {
 }
 
 div#personal {
-    width: 50%;
-    float: left;
+    width: 100%;
     color: white;
 }
 
@@ -49,19 +48,19 @@ label {
     line-height: 200%
 }
 
-#nombre {
+#nombfec {
     width: 45%;
     float: left;
 }
 
-#nacimiento {
+#direccion {
     width: 45%;
     float: right;
 }
 
-#direccion {
-    width: 100%;
-    clear: left;
+#aficiones {
+    width: 45%;
+    float: right;
 }
 
 div#radioboton {
@@ -104,7 +103,7 @@ div.seleccion {
 footer {
     background-color: slategrey;
     text-align: center;
-    font-family: cursive
+    font-family: cursive;
 }
 
 .oculto {
