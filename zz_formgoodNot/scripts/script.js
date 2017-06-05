@@ -57,23 +57,23 @@ class Formulario {
             case "web":
                 this.cargarSelect(this.domSubCurso, this.cCurso.web)
                 this.valCurso = this.rButt[0].nextSibling.data;
-               this.domSubCurso.classList.remove("oculto");
+                this.domSubCurso.classList.remove("oculto");
                 break;
 
             case "sist":
                 this.cargarSelect(this.domSubCurso, this.cCurso.sist)
                 this.valCurso = this.rButt[1].nextSibling.data;
-             this.domSubCurso.classList.remove("oculto");
+                this.domSubCurso.classList.remove("oculto");
                 break;
 
             case "obj":
                 this.cargarSelect(this.domSubCurso, this.cCurso.obj)
                 this.valCurso = this.rButt[2].nextSibling.data;
-             this.domSubCurso.classList.remove("oculto");
+                this.domSubCurso.classList.remove("oculto");
                 break;
-          case "nada":
-               
-              this.domSubCurso.className = "oculto";
+            case "nada":
+
+                this.domSubCurso.className = "oculto";
                 break;
 
         }
@@ -149,7 +149,7 @@ class Formulario {
 }
 
 
-document.addEventListener("DOMContentLoaded", function (e) {
+document.addEventListener("DOMContentLoaded", function(e) {
     oFormulario = new Formulario
     e.preventDefault();
     document.getElementById("submit").onclick = oFormulario.fRecDatos.bind(oFormulario)

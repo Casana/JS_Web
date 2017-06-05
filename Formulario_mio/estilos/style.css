@@ -97,7 +97,17 @@ div.seleccion {
     background-color: white;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
+    border-width: 1em;
+    border-style: solid;
     padding: 3%;
+}
+
+li:nth-child(2n) {
+    background-color: gainsboro;
+}
+
+li:nth-child(2n+1) {
+    background-color: silver;
 }
 
 footer {
