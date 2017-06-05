@@ -45,7 +45,7 @@ class Formulario {
     //anulamos el comportamiento por defecto del submit:
 
     simulaEnvio(oE) {
-        alert("Sus datos han sido enviados. Muchas gracias.")
+        alert("Sus datos han sido enviados correctamente. Muchas gracias.")
         oE.preventDefault();
         this.escribeDatos();
     }
@@ -109,6 +109,21 @@ class Formulario {
             oDom.innerHTML += "<option>" + aDatos[i] + "</option>";
         }
     }
+
+    // Comprobamos que ambas contraseñas son iguales:
+
+    comparar() {
+        this.oDatos.Contraseña = document.getElementById("cont").value;
+        this.oDatos.Contraseña2 = document.getElementById("cont2").value;
+
+        if (this.oDatos.Contraseña.value != this.oDatos.Contraseña2.value) {
+            msg = "Las contraseñas no coinciden"
+        } else {
+            this.escribeDatos()
+        }
+
+    }
+
 
     //Recogemos los datos:
 
